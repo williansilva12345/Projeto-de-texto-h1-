@@ -1,0 +1,48 @@
+   
+
+        #container {
+            display: flex;
+			justify-content:center;
+            align-items: center; /* Centraliza o conteúdo da div verticalmente */
+			height:500px;
+        }
+
+       #texth1{
+	   
+			position:relative;
+			overflow:hidden;
+			font-size:4rem;
+			
+			-webkit-text-stroke:1px orange;
+			color:transparent;
+			text-align:center;
+			white-space:nowrap;
+            margin: 0; /* Remove margens do h1 */
+        }
+		
+		#texth1:before{
+				content:attr(data-anima);
+		-webkit-text-stroke:1px orange;
+		width:0%;
+		height:100%;
+		overflow:hidden;
+		color:orange;
+		position:absolute;
+		left:0px;
+	 animation: animate 4s linear infinite; /* Adiciona animação */
+
+		border-right:1px solid orange;
+			
+		}
+		
+		
+		@keyframes animate {
+		
+			0%{
+				width:0%;
+			}
+			100%{
+				
+				width:100%;
+			}
+		}
